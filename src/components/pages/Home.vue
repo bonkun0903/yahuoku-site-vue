@@ -1,6 +1,6 @@
 <template>
   <section class="home">
-    <HomeHero class="sidebar-area"/>
+    <HomeHero/>
   </section>
 </template>
 <script>
@@ -12,8 +12,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-.home {
-  padding-bottom: 50px;
-}
-</style>
