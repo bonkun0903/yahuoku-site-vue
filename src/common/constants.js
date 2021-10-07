@@ -23,6 +23,14 @@ export default {
     {
       name: 'ACCESS',
       url: '/access'
+    },
+    {
+      name: 'PRICE_LIST',
+      url: '/price_list'
+    },
+    {
+      name: 'PRODUCT_CONDITION_TABLE',
+      url: '/product_condition_table'
     }
   ],
   workItems: [

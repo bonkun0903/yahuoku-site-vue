@@ -4,6 +4,8 @@ import Home from './components/Home.vue'
 import About from './components/About.vue'
 import Work from './components/Work.vue'
 import Service from './components/Service.vue'
+import PriceList from './components/PriceList.vue'
+import ProductConditionTable from './components/ProductConditionTable.vue'
 
 Vue.use(Router)
 
@@ -28,6 +30,16 @@ export default new Router({
       path: '/service',
       name: 'service',
       component: Service
+    },
+    {
+      path: '/price_list',
+      name: 'price_list',
+      component: PriceList
+    },
+    {
+      path: '/product_condition_table',
+      name: 'product_condition_table',
+      component: ProductConditionTable
     }
   ],
   scrollBehavior (to, from, savedPosition) {
