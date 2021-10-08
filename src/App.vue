@@ -3,48 +3,63 @@
     <v-main>
       <v-navigation-drawer
       v-model="drawer"
+      color="basil"
+      floating
       app
       >
-      <v-sheet
-      color="grey lighten-4"
-      class="pa-4"
-      >
-      <v-avatar
-      class="mb-4"
-      color="grey darken-1"
-      size="64"
-      ></v-avatar>
-
-      <div>john@vuetifyjs.com</div>
-      </v-sheet>
 
       <v-divider></v-divider>
 
       <v-list>
         <v-list-item
-          v-for="[icon, text, to] in links"
-          :key="icon"
-          :to="to"
+          v-for="link in links"
+          :key="link.icon"
+          :to="link.to"
           link
         >
         <v-list-item-icon>
-          <v-icon>{{ icon }}</v-icon>
+          <v-icon>{{ link.icon }}</v-icon>
         </v-list-item-icon>
 
       <v-list-item-content>
-        <v-list-item-title>{{ text }}</v-list-item-title>
+        <v-list-item-title>{{ link.name}}</v-list-item-title>
       </v-list-item-content>
       </v-list-item>
       </v-list>
       </v-navigation-drawer>
 
-      <v-app-bar app>
-        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-        <v-toolbar-title>岡崎車輌部品ヤフオク店</v-toolbar-title>
-      </v-app-bar>
-
-      <router-view/>
+      <v-card color="basil">
+        <v-toolbar color="basil">
+          <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+          <v-toolbar-title class="text-center justify-center py-6 basil--text">
+            岡崎車輌部品ヤフオク店
+          </v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn icon>
+            <v-icon>mdi-magnify</v-icon>
+          </v-btn>
+          <v-btn icon>
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+          <template v-slot:extension>
+            <v-tabs
+              v-model="tab"
+              background-color="transparent"
+              color="basil"
+              grow
+            >
+              <v-tab
+                v-for="item in links"
+                :key="item.name"
+                :to="item.to"
+              >
+                {{ item.name }}
+              </v-tab>
+            </v-tabs>
+          </template>
+        </v-toolbar>
+        <router-view/>
+      </v-card>
     </v-main>
   </v-app>
 </template>
@@ -53,17 +68,29 @@
 export default {
   name: 'App',
   data: () => ({
+    tab: null,
     drawer: null,
     links: [
-      ['mdi-inbox-arrow-down', 'ホーム', '/'],
-      ['mdi-inbox-arrow-down', 'ストア情報', '/'],
-      ['mdi-inbox-arrow-down', 'はじめに', '/'],
-      ['mdi-inbox-arrow-down', 'お知らせ', '/'],
-      ['mdi-inbox-arrow-down', 'お取引の流れ', '/'],
-      ['mdi-inbox-arrow-down', '注意事項', '/'],
-      ['mdi-inbox-arrow-down', '返品・返金', '/'],
-      ['mdi-send', '送料表', 'price_list']
+      { name: 'ホーム', to: '/', icon: 'mdi-inbox-arrow-down' },
+      { name: 'ストア情報', to: '/store_info', icon: 'mdi-inbox-arrow-down' },
+      { name: 'はじめに', to: '/first_view', icon: 'mdi-inbox-arrow-down' },
+      { name: 'お知らせ', to: '/notice_view', icon: 'mdi-inbox-arrow-down' },
+      { name: 'お取引の流れ', to: '/trading_flow_view', icon: 'mdi-inbox-arrow-down' },
+      { name: '注意事項', to: '/considerations_view', icon: 'mdi-inbox-arrow-down' },
+      { name: '返品・返金', to: '/return_and_refund_view', icon: 'mdi-inbox-arrow-down' },
+      { name: '送料表', to: '/price_list', icon: 'mdi-inbox-arrow-down' }
     ]
-  })
+  }),
+  components: {
+  }
 }
 </script>
+<style lang="scss" scoped>
+/* Helper classes */
+.basil {
+  background-color: #FFFBE6 !important;
+}
+.basil--text {
+  color: #356859 !important;
+}
+</style>
