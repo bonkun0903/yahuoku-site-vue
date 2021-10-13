@@ -74,7 +74,6 @@
 <script>
 
 export default {
-  el: '#app',
   data: () => ({
     tab: null,
     drawer: null,
