@@ -81,7 +81,6 @@ export default {
       // { name: 'ストア情報', to: '/store_info', icon: 'mdi-inbox-arrow-down' },
       { name: 'はじめに', to: '/', icon: 'mdi-arrow-right-drop-circle' },
       // { name: 'お知らせ', to: '/notice_view', icon: 'mdi-inbox-arrow-down' },
-      // { name: 'お取引の流れ', to: '/trading_flow_view', icon: 'mdi-inbox-arrow-down' },
       // { name: '注意事項', to: '/considerations_view', icon: 'mdi-inbox-arrow-down' },
       // { name: '返品・返金', to: '/return_and_refund_view', icon: 'mdi-inbox-arrow-down' },
       { name: '送料一覧表', to: '/price_list', icon: 'mdi-grid' }
