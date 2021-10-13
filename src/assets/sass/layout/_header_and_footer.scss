@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.layout-header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+
+.layout-footer {
+  background-color: #eee;
+  bottom: 0;
+  font-size: smaller;
+  padding: 0.1rem 1rem;
+  text-align: center;
+  position: sticky;
+}

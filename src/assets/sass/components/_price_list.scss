@@ -14,15 +14,6 @@ p {
 	max-height:100% !important;
 }
 
-h2 {
-	font-size:17px;
-	line-height:29px;
-	background:#EDB700;
-	color:#FFF;
-	padding:6px 0 5px 10px;
-	margin:10px 0 0 0;
-}
-
 p {
 	font-size:14px;
 	line-height:24px;
@@ -212,12 +203,12 @@ a:hover {
 	margin-bottom:100px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1264px) {
   .scroll {
     overflow-x: auto;
   }
   .tbl-r07 {
-    min-width: 900px;
+    min-width: 1000px;
     margin: 0 10px 50px;
   }
   .tbl-r07 td {
