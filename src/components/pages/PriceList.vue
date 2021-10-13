@@ -9,7 +9,9 @@
           <v-divider
             class="ml-3 mr-3"
           ></v-divider>
-          <v-card-text>
+          <v-card-text
+            class="pb-0"
+          >
             <p>■ こちらは、<a href="#">パーツショップタッキー</a>の税込送料一覧表です。</p>
             <p>
               ■ ヤフオクストア掲載商品の『送料区分』の欄をよくご覧になって、送料の見間違いのないようにご注意ください。<br>
@@ -30,11 +32,12 @@
               ・重量物の場合はリフトの有無<br>
               をご記載の上、ご質問ください。<br>
               ご質問欄に<strong style="color: red;">氏名・電話番号等の個人情報を掲載しないでください。</strong><br>
-              運送会社の都合でサイズ「 I 」は配達ができない地域があります。
+              運送会社の都合でサイズ「 I 」は配達ができない地域があります。<br>
+              ※ 日曜日・祝祭日指定は運送会社の都合によりできません。
             </p>
-            <p>※ 日曜日・祝祭日指定は運送会社の都合によりできません。</p>
           </v-card-text>
           <v-container class="scroll">
+            ← スマートフォンでご覧の方は横スクロールしてご覧ください。→
             <table style="margin: auto;" class="tbl-r07" cellspacing="0" cellpadding="0">
               <tr>
                 <tr>
