@@ -24,12 +24,11 @@
             </p>
             <p>
               （表中 ※１）サイズ「 I 」は御入札の前に、商品ページの『出品者へ質問』ボタンより、運送の可否をお問い合わせください。<br>
-              質問欄御記載いただく内容は...<br>
+              質問欄へ<br>
               ・送り先住所（市町村まで）<br>
               ・業者・法人様または個人様であること<br>
-              ・※重量物の場合はリフトの有無<br>
-              を御記載の上、ご質問ください。<br>
-              こちらをクリック（タップ）していただくと質問テンプレートをご利用いただけます。<br>
+              ・重量物の場合はリフトの有無<br>
+              をご記載の上、ご質問ください。<br>
               ご質問欄に<strong style="color: red;">氏名・電話番号等の個人情報を掲載しないでください。</strong><br>
               運送会社の都合でサイズ「 I 」は配達ができない地域があります。
             </p>
@@ -239,3 +238,16 @@
     </v-container>
   </section>
 </template>
+<script>
+// import ScrollHint from 'scroll-hint'
+
+// export default {
+//   scrollHint: ScrollHint.new('.js-scrollable', {
+//     suggestiveShadow: true,
+//     remainingTime: 5000,
+//     i18n: {
+//       scrollable: 'スクロールできます'
+//     }
+//   })
+// }
+</script>

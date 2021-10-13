@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "scroll-hint": "^1.2.4",
     "vue": "^2.6.11",
+    "vue-clipboard2": "^0.3.3",
     "vue-router": "^3.5.2",
     "vue-scrollto": "^2.20.0",
     "vuetify": "^2.4.0"
