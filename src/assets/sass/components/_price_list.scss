@@ -14,11 +14,6 @@ p {
 	max-height:100% !important;
 }
 
-#contents {
-	width:950px;
-	margin:0 auto 0 auto;
-}
-
 h2 {
 	font-size:17px;
 	line-height:29px;
@@ -52,7 +47,6 @@ table {
 	border-top:#1cd9d2 solid 1px;
 	border-left:#1cd9d2 solid 1px;
 	margin:15px 0 0 0;
-  width: 950px
 }
 
 table tr {
@@ -216,4 +210,18 @@ a:hover {
 
 .mb100{
 	margin-bottom:100px;
+}
+
+@media screen and (max-width: 900px) {
+  .scroll {
+    overflow-x: auto;
+  }
+  .tbl-r07 {
+    min-width: 900px;
+    margin: 0 10px 50px;
+  }
+  .tbl-r07 td {
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+  }
 }
