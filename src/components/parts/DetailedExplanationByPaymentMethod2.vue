@@ -1,6 +1,6 @@
 <template>
   <section id="detailed-explanation-by-payment-method2">
-    <v-card-title background-colo>代引き詳細説明</v-card-title>
+    <v-card-title background-colo>詳細説明</v-card-title>
     <v-card-text>
       <h3 id="to-method2-detailed-link-1">①落札後、ヤフオク！から自動送信される落札通知が到着します</h3>
       <p>※お見落としないように、内容を必ずよくお読みください。弊社から落札通知のメールはいたしません。<br>

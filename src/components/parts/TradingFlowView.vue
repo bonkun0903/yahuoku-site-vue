@@ -2,7 +2,7 @@
   <section class="trading-flow-view">
     <v-card-title >お取引の流れ</v-card-title>
     <v-card-text class="pb-0">
-      お取引の流れを一覧でご確認いただけます。
+      お取引の流れを一覧でご確認ください。<strong style="color: orange;">詳細説明は吹き出しをタップ！</strong>
     </v-card-text>
     <v-card-text class="pt-0">
       ※ 決済方法が『かんたん決済・銀行振り込み』か『代引き発送』お取引の流れが異なります。お選びいただいた決済方法をクリック（タップ）してください。
