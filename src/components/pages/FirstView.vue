@@ -24,7 +24,7 @@
       </v-row>
       <v-row>
         <v-col>
-          <v-card>
+          <v-card style="height: 1000px">
             <v-card-title>返品・返金について</v-card-title>
           </v-card>
         </v-col>

@@ -1,7 +1,10 @@
 <template>
   <section class="trading-flow-view">
-    <v-card-title>お取引の流れ</v-card-title>
-    <v-card-text>
+    <v-card-title >お取引の流れ</v-card-title>
+    <v-card-text class="pb-0">
+      お取引の流れを一覧でご確認いただけます。
+    </v-card-text>
+    <v-card-text class="pt-0">
       ※ 決済方法が『かんたん決済・銀行振り込み』か『代引き発送』お取引の流れが異なります。お選びいただいた決済方法をクリック（タップ）してください。
     </v-card-text>
     <v-tabs
@@ -27,6 +30,7 @@
                   <v-timeline-item
                     v-for="(item, i) in choiceItems(n)"
                     :key="i"
+                    v-scroll-to="toDetailedLink(i, n)"
                     :color="item.color"
                     class="white--text mb-12"
                     large
@@ -41,6 +45,9 @@
                       <v-card-title class="text-h6">
                         {{ item.title }}
                       </v-card-title>
+                      <v-card-text v-if="item.describe" class="white--text">
+                        {{ item.describe }}
+                      </v-card-text>
                     </v-card>
                   </v-timeline-item>
                 </v-timeline>
@@ -73,97 +80,108 @@ export default {
       {
         color: 'green lighten-1',
         icon: 'mdi-star',
-        title: '落札'
+        title: '落札',
+        describe: ''
       },
       {
         color: 'green lighten-1',
         icon: 'mdi-book-variant',
-        title: 'オーダーフォーム入力'
+        title: 'オーダーフォーム入力',
+        describe: ''
       },
       {
-        color: 'yellow darken-2',
+        color: 'green lighten-1',
         icon: 'mdi-airballoon',
-        title: 'かんたん決済または、銀行振り込みを選択'
+        title: 'かんたん決済または、銀行振り込みを選択',
+        describe: ''
       },
       {
         color: 'yellow darken-2',
         icon: 'mdi-buffer',
-        title: '振込金額（商品代＋送料）のお知らせを受け取る'
+        title: '振込金額（商品代＋送料）のお知らせを受け取る',
+        describe: ''
       },
       {
         color: 'yellow darken-2',
         icon: 'mdi-buffer',
-        title: '決済'
+        title: '決済',
+        describe: ''
       },
       {
-        color: 'green lighten-1',
+        color: 'orange darken-3',
         icon: 'mdi-buffer',
-        title: '商品発送'
+        title: '商品発送',
+        describe: ''
       },
       {
-        color: 'green lighten-1',
+        color: 'orange darken-3',
         icon: 'mdi-buffer',
-        title: '弊社より発送完了メール・評価を送付'
+        title: '弊社より発送完了メール・評価を送付',
+        describe: ''
       },
       {
-        color: 'green lighten-1',
+        color: 'orange darken-3',
         icon: 'mdi-buffer',
-        title: '商品到着・確認'
+        title: '商品到着・商品確認',
+        describe: ''
       },
       {
-        color: 'green lighten-1',
+        color: 'orange darken-3',
         icon: 'mdi-buffer',
-        title: '商品・対応に問題がなければ評価をお願いいたします。'
+        title: 'お取引の完了',
+        describe: 'お取引、ご対応に問題なければ評価をよろしくお願いいたします。'
       }
     ],
     items2: [
       {
         color: 'green lighten-1',
         icon: 'mdi-star',
-        title: '代引き落札'
+        title: '落札',
+        describe: ''
       },
       {
         color: 'green lighten-1',
         icon: 'mdi-book-variant',
-        title: 'オーダーフォーム入力'
+        title: 'オーダーフォーム入力',
+        describe: ''
       },
       {
-        color: 'yellow darken-2',
+        color: 'green lighten-1',
         icon: 'mdi-airballoon',
-        title: 'かんたん決済または、銀行振り込みを選択'
+        title: '代引き発送を選択、即日発送します。',
+        describe: '※ 14時までにオーダーフォームから代引き発送をご申請いただいた場合、即日発送いたします。'
       },
       {
-        color: 'yellow darken-2',
+        color: 'orange darken-3',
         icon: 'mdi-buffer',
-        title: '振込金額（商品代＋送料）のお知らせを受け取る'
+        title: '商品発送',
+        describe: ''
       },
       {
-        color: 'yellow darken-2',
+        color: 'orange darken-3',
         icon: 'mdi-buffer',
-        title: '決済'
+        title: '弊社より発送完了メール・評価を送付',
+        describe: ''
       },
       {
-        color: 'green lighten-1',
+        color: 'orange darken-3',
         icon: 'mdi-buffer',
-        title: '商品発送'
+        title: '商品到着・代引き決済・商品確認',
+        describe: ''
       },
       {
-        color: 'green lighten-1',
+        color: 'orange darken-3',
         icon: 'mdi-buffer',
-        title: '弊社より発送完了メール・評価を送付'
-      },
-      {
-        color: 'green lighten-1',
-        icon: 'mdi-buffer',
-        title: '商品到着・確認'
-      },
-      {
-        color: 'green lighten-1',
-        icon: 'mdi-buffer',
-        title: '商品・対応に問題がなければ評価をお願いいたします。'
+        title: 'お取引の完了',
+        describe: 'お取引、ご対応に問題なければ評価をよろしくお願いいたします。'
       }
     ]
   }),
+  methods: {
+    toDetailedLink: function (index, methodNum) {
+      return methodNum === 1 ? '#to-method1-detailed-link-' + (index + 1) : '#to-method2-detailed-link-' + (index + 1)
+    }
+  },
   computed: {
     choiceItems: function () {
       return function (n) {

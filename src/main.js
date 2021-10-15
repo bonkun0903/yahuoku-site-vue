@@ -6,7 +6,10 @@ import VueScrollTo from 'vue-scrollto'
 import VueClipboard from 'vue-clipboard2'
 
 Vue.use(VueClipboard)
-Vue.use(VueScrollTo)
+Vue.use(VueScrollTo, {
+  offset: -120,
+  duration: 1000
+})
 Vue.config.productionTip = false
 
 require('@/assets/sass/main.scss')
