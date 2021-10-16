@@ -1,5 +1,5 @@
 <template>
-  <section class="trading-flow-view">
+  <section id="trading-flow-view">
     <v-card-title >お取引の流れ</v-card-title>
     <v-card-text class="pb-0">
       お取引の流れを一覧でご確認ください。<strong style="color: orange;">詳細説明は吹き出しをタップ！</strong>

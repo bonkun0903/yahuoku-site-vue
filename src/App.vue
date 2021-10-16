@@ -77,7 +77,7 @@ export default {
     tab: null,
     drawer: null,
     links: [
-      { name: 'はじめに', to: '/', icon: 'mdi-arrow-right-drop-circle' },
+      { name: 'お読みください', to: '/', icon: 'mdi-arrow-right-drop-circle' },
       { name: '送料一覧表', to: '/price_list', icon: 'mdi-grid' }
     ]
   }),
