@@ -1,16 +1,5 @@
 <template>
   <section class="first-view">
-    <div class="my-2 pagetop">
-      <v-btn
-        color="success"
-        fab
-        x-large
-        dark
-        @click="scrollTop"
-      >
-        <v-icon>mdi-domain</v-icon>
-      </v-btn>
-    </div>
     <v-container>
       <!-- <v-row
         class="pt-3"
