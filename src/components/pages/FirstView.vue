@@ -1,7 +1,7 @@
 <template>
   <section class="first-view">
     <v-container>
-      <!-- <v-row
+      <v-row
         class="pt-3"
         align="center"
         justify="space-around"
@@ -17,7 +17,7 @@
         >
           {{ item.title }}
         </v-btn>
-      </v-row> -->
+      </v-row>
       <v-row>
         <v-col>
           <v-card>
