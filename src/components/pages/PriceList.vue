@@ -36,7 +36,7 @@
               ※ 日曜日・祝祭日指定は運送会社の都合によりできません。
             </p>
           </v-card-text>
-          <v-container class="scroll">
+          <v-container class="scroll" id="price-table">
             ← スマートフォンでご覧の方は横スクロールしてご覧ください。→
             <table style="margin: auto;" class="tbl-r07" cellspacing="0" cellpadding="0">
               <tr>
