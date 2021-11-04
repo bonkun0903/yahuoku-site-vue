@@ -231,7 +231,7 @@
                   <td colspan="12" style="vertical-align: inherit;">要問合わせ</td>
                 </tr>
                 <tr>
-                  <td rowspan="2" class="th02" width="200px">I</td>
+                  <td rowspan="2" class="th02" width="200px">T</td>
                   <td colspan="13">要問い合わせ</td>
                 </tr>
             </table>
