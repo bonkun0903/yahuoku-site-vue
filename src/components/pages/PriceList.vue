@@ -232,7 +232,7 @@
                 </tr>
                 <tr>
                   <td rowspan="2" class="th02" width="200px">I</td>
-                  <td colspan="13">※１</td>
+                  <td colspan="13">要問い合わせ</td>
                 </tr>
             </table>
           </v-container>
