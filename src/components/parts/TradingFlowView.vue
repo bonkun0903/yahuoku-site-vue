@@ -4,16 +4,18 @@
     <v-card-text class="pb-0">
       お取引の流れを一覧でご確認ください。<strong style="color: orange;">詳細説明は吹き出しをタップ！</strong>
     </v-card-text>
-    <v-card-text class="pt-0">
-      ※ 決済方法が『かんたん決済・銀行振り込み』か『代引き発送』お取引の流れが異なります。お選びいただいた決済方法をクリック（タップ）してください。
-    </v-card-text>
+    <!-- <v-card-text class="pt-0">
+      ※ 決済方法が『かんたん決済・PayPay銀行決済』か『代引き発送』お取引の流れが異なります。お選びいただいた決済方法をクリック（タップ）してください。
+    </v-card-text> -->
     <v-tabs
       color="orange darken-1"
       background-color="grey lighten-4"
       show-arrows
     >
-      <v-tab>かんたん決済・銀行振り込み</v-tab>
-      <v-tab>代引き発送</v-tab>
+      <v-tab>かんたん決済・PayPay銀行決済</v-tab>
+      <!-- ひとまず代引きは対応しないのでコメントアウト -->
+      <!-- 必要なら以下の一行をコメントアウト解除で復帰できます。 -->
+      <!-- <v-tab>代引き発送</v-tab> -->
       <v-tab-item
         v-for="n in 2"
         :key="n"
@@ -92,43 +94,31 @@ export default {
       {
         color: 'green lighten-1',
         icon: 'mdi-airballoon',
-        title: 'かんたん決済または、銀行振り込みを選択',
+        title: '配送方法・ご決済方法を選択',
+        describe: 'かんたん決済・PayPay銀行決済などがご利用いただけます。'
+      },
+      {
+        color: 'yellow darken-2',
+        icon: 'mdi-buffer',
+        title: '決済金額の確定',
         describe: ''
       },
       {
         color: 'yellow darken-2',
         icon: 'mdi-buffer',
-        title: '振込金額（商品代＋送料）のお知らせを受け取る',
-        describe: ''
-      },
-      {
-        color: 'yellow darken-2',
-        icon: 'mdi-buffer',
-        title: '決済',
+        title: 'ご決済',
         describe: ''
       },
       {
         color: 'orange darken-3',
         icon: 'mdi-buffer',
-        title: '商品発送',
+        title: '商品発送・評価を送付',
         describe: ''
       },
       {
         color: 'orange darken-3',
         icon: 'mdi-buffer',
-        title: '弊社より発送完了メール・評価を送付',
-        describe: ''
-      },
-      {
-        color: 'orange darken-3',
-        icon: 'mdi-buffer',
-        title: '商品到着・商品確認',
-        describe: ''
-      },
-      {
-        color: 'orange darken-3',
-        icon: 'mdi-buffer',
-        title: 'お取引の完了',
+        title: '商品到着・商品確認・お取引の完了',
         describe: 'お取引、ご対応に問題なければ評価をよろしくお願いいたします。'
       }
     ],
