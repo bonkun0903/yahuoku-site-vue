@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Check deployed apps in Netlify.
+
+See[BonsYahuokuSite](https://sage-swan-0dba40.netlify.app/#/)
