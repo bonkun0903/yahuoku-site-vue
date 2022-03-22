@@ -1,4 +1,4 @@
-# simple-vue-website-sample
+# yahuoku-site-vue
 
 ## Project setup
 ```
